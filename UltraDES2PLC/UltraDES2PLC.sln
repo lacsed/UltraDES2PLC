@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34723.18
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UltraDES2PLC", "UltraDES2PLC.csproj", "{482326D2-D4B9-4C73-A434-F509010B7C9B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example", "..\Example\Example.csproj", "{63AF89F9-AC8B-4AD7-846C-675211F9C1A1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{482326D2-D4B9-4C73-A434-F509010B7C9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{482326D2-D4B9-4C73-A434-F509010B7C9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{482326D2-D4B9-4C73-A434-F509010B7C9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{482326D2-D4B9-4C73-A434-F509010B7C9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63AF89F9-AC8B-4AD7-846C-675211F9C1A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63AF89F9-AC8B-4AD7-846C-675211F9C1A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63AF89F9-AC8B-4AD7-846C-675211F9C1A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63AF89F9-AC8B-4AD7-846C-675211F9C1A1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {809C29B5-9D06-4B9B-8191-AB6A24B91CE0}
+	EndGlobalSection
+EndGlobal
