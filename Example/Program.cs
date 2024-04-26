@@ -48,7 +48,7 @@ var ED = new DeterministicFiniteAutomaton(new Transition[]
 {
     (s1, sed_f, s2),
     (s2, sed_r, s1),
-    (s1, ee, s3),
+    (s1, ed, s3),
     (s3, ssd_r, s1)
 }, s1, "ED"); // Right Conveyor
 
