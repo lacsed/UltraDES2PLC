@@ -116,7 +116,7 @@ public class PLCprogram
 
                 ladder.Add(LdCoil(PlantState(d, i), storageModifierType.set, element++, idContacts));
                 ladder.Add(LdCoil(PlantState(o, i), storageModifierType.reset, element++, idContacts));
-                ladder.Add(LdJump("procedures", element++,
+                ladder.Add(LdJump("supervisors", element++,
                     idContacts)); //originally supervisors, but changed to procedures
             }
         }

@@ -100,4 +100,4 @@ var sups = DeterministicFiniteAutomaton.LocalModularReducedSupervisor(plants,spe
 var events = new[] { ep, cg, cp, sp_r, sp_f, see_f, see_r, sse_r, sed_r, sed_f, ssd_r, ee, ed, cf, ce, cd, spos_r };
 
 var plc = new PLCprogram(sups, plants, events);
-plc.ToXMLFile("test.xml");
+plc.ToXMLFile("SDiM.xml");
