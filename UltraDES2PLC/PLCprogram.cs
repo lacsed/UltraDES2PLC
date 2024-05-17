@@ -92,7 +92,7 @@ public class PLCprogram
                 ladder.Add(LdComment(element++));
                 ladder.Add(LdVendor(element++));
 
-                ladder.Add(LdContact(PlantState(o, i), element++, [0]));
+                ladder.Add(LdContact(PlantState(o, i, plants), element++, [0]));
 
                 var idState = element - 1;
 
@@ -114,8 +114,8 @@ public class PLCprogram
                     //ladder.Add(LdCoil("p_" + ev, storageModifierType.none, element++, idContacts));
                 }
 
-                ladder.Add(LdCoil(PlantState(d, i), storageModifierType.set, element++, idContacts));
-                ladder.Add(LdCoil(PlantState(o, i), storageModifierType.reset, element++, idContacts));
+                ladder.Add(LdCoil(PlantState(d, i, plants), storageModifierType.set, element++, idContacts));
+                ladder.Add(LdCoil(PlantState(o, i, plants), storageModifierType.reset, element++, idContacts));
                 ladder.Add(LdJump("supervisors", element++,
                     idContacts)); //originally supervisors, but changed to procedures
             }
@@ -132,7 +132,7 @@ public class PLCprogram
             ladder.Add(LdCoil(SupState(sups[i].InitialState, i), storageModifierType.set, element++, idStart));
 
         for (var i = 0; i < plants.Length; i++)
-            ladder.Add(LdCoil(PlantState(plants[i].InitialState, i), storageModifierType.set, element++, idStart));
+            ladder.Add(LdCoil(PlantState(plants[i].InitialState, i, plants), storageModifierType.set, element++, idStart));
 
         ladder.Add(LdRightRail());
     }
@@ -141,7 +141,7 @@ public class PLCprogram
     public string PouName { get; set; } = "DES_PRG";
 
     private string SupState(AbstractState s, int k) => $"s{k:00}_" + s.ToString().Replace("|", "_");
-    private string PlantState(AbstractState s, int k) => $"p{k:00}_" + s.ToString().Replace("|", "_");
+    private string PlantState(AbstractState s, int k, DeterministicFiniteAutomaton[] p) => $"{p[k]}_" + s.ToString().Replace("|", "_");//$"p{k:00}_" + s.ToString().Replace("|", "_");
 
     public void ToXMLFile(string path)
     {
